@@ -6,7 +6,13 @@ const Pagination = ({ page, last_page, set_page }) => {
     });
   };
   const handle_next_page = () => {
-    set_page((prev_state) => prev_state + 1);
+    set_page((prev_state) => {
+      if (prev_state === last_page) {
+        return prev_state;
+      } else {
+        return prev_state + 1;
+      }
+    });
     scroll_top();
   };
   const handle_prev_page = () => {

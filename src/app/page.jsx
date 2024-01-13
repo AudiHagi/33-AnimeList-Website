@@ -1,11 +1,9 @@
 import AnimeList from "@/components/AnimeList";
 import Header from "@/components/AnimeList/header";
+import { get_anime_response } from "./libs/api-libs";
 
 const Page = async () => {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?limit=8`
-  );
-  const top_anime = await response.json();
+  const top_anime = await get_anime_response("top/anime", "limit=8");
 
   return (
     <>
