@@ -1,4 +1,4 @@
-import { get_anime_response } from "@/app/libs/api-libs";
+import { get_anime_response } from "@/libs/api-libs";
 import VideoPlayer from "@/components/Utilities/VideoPlayer";
 import Image from "next/image";
 
@@ -38,6 +38,8 @@ const Page = async ({ params: { id } }) => {
           height={250}
           className="w-full rounded object-cover"
         />
+      </div>
+      <div className="pt-4 px-4 flex sm:flex-nowrap flex-wrap gap-2 text-color-primary">
         <p className="text-justify text-xl">{anime.data.synopsis}</p>
       </div>
       <div>

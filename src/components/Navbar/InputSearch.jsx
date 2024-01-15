@@ -8,14 +8,11 @@ const InputSearch = () => {
   const search_ref = useRef();
   const router = useRouter();
   const handle_search = (event) => {
+    const keyword = search_ref.current.value;
+    if (!keyword || keyword.trim() == "") return;
     if (event.key === "Enter" || event.type == "click") {
-      const keyword = search_ref.current.value;
-      if (keyword != "") {
-        event.preventDefault();
-        router.push(`/search/${keyword}`);
-      } else {
-        return;
-      }
+      event.preventDefault();
+      router.push(`/search/${keyword}`);
     }
   };
 
