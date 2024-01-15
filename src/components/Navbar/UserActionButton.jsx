@@ -16,7 +16,7 @@ const UserActionButton = async () => {
 
       <Link
         href={action_url}
-        className="bg-color-dark text-color-accent py-1 px-12"
+        className="bg-color-dark text-color-accent py-1 px-10"
       >
         {action_label}
       </Link>
