@@ -17,5 +17,5 @@ export const reproduce_data = (data, gap) => {
   const response = {
     data: data.slice(first, last),
   };
-  return response
+  return response;
 };
